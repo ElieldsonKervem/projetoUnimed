@@ -85,15 +85,15 @@ export default function Footer() {
       </div>
       <div className={styles.sliderFooter}>
            <div className={styles.sliderItens}>
-               <Image alt="" width={'intrinsic'} src={brandgroup} />
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
-               <Image alt="" width={'intrinsic'}   src={brandgroup}/>
+               <Image alt="" layout="intrinsic" src={brandgroup} />
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
+               <Image alt="" layout="intrinsic"   src={brandgroup}/>
            </div>
       </div>
     </footer>
