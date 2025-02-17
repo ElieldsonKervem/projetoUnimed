@@ -207,7 +207,7 @@ h2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  background:url('@/../public/vetor.svg'), linear-gradient(to top, #59B650 0%, #00995D 100%);
+  background:url('/vetor.svg'), linear-gradient(to top, #59B650 0%, #00995D 100%);
   background-repeat: repeat;
   background-size: cover 100%;
   position: relative;
