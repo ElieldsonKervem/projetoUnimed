@@ -52,6 +52,10 @@ bash
 Copiar
 Editar
 npm install
+
+https://github.com/user-attachments/assets/e9249b40-99f8-43ad-902e-c5a6b958b7d0
+
+
 Rode o servidor de desenvolvimento:
 
 bash
