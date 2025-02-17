@@ -2,7 +2,7 @@
 import styles from "./searchResult.module.css";
 import Image from "next/image";
 interface Result {
-  id: number;
+  id: string;
   img?: string;
   name: string;
   price: number;
