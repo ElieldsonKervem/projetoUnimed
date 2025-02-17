@@ -90,6 +90,6 @@ Considerações Finais
 Este projeto foi desenvolvido com o objetivo de demonstrar as habilidades em Next.js, TypeScript, e na criação de interfaces modernas e responsivas. Ele pode ser expandido com mais funcionalidades, como integração com uma API para gerenciar produtos e carrinho de compras, autenticação de usuários e pagamento.
 
 
-https://github.com/user-attachments/assets/9e285dfc-c0f8-4fa8-af8e-199c794c8368
+
 ![WhatsApp Image 2025-02-17 at 08 22 06](https://github.com/user-attachments/assets/6eca5056-7421-4b74-8a3e-ef7fe1ebcb81)
 
