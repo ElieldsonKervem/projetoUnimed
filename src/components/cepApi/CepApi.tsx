@@ -1,46 +1,58 @@
 'use client'
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
 import style from './cep.module.css';
 import { IoMdClose } from "react-icons/io";
 
+// Interface para as propriedades do componente
+interface CepConsultProps {
+    className?: string;
+    close: () => void;
+}
 
-//lembrar de implementar interface para os doados
+// Interface para o tipo do endereço
+interface Endereco {
+    logradouro: string;
+    bairro: string;
+    localidade: string;
+    uf: string;
+    erro?: string;
+}
 
-export default function CepConsult({ close }) {
-    const [cep, setCep] = useState('');
-    const [endereco, setEndereco] = useState(null);
+export default function CepConsult({ className, close }: CepConsultProps) {
+    const [cep, setCep] = useState<string>(''); // Define tipo de 'cep' como string
+    const [endereco, setEndereco] = useState<Endereco | null>(null); // Define tipo de 'endereco' como 'Endereco' ou 'null'
 
-    async function handleSubmit(event) {
+    // Tipando o evento da submissão
+    async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
         event.preventDefault();
         try {
             const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-            const data = await response.json();
+            const data: Endereco = await response.json(); // Tipando a resposta
             setEndereco(data);
         } catch (error) {
             console.error("Erro na consulta:", error);
-            setEndereco({ erro: "CEP não encontrado" });
+            setEndereco({ logradouro: '', bairro: '', localidade: '', uf: '', erro: "CEP não encontrado" });
         }
     }
 
-    function formatarCep(event) {
+    // Tipando o evento de mudança no input
+    function formatarCep(event: ChangeEvent<HTMLInputElement>): void {
         const valor = event.target.value.replace(/\D/g, '');
         setCep(valor);
     }
 
     return (
-        <div className={style.cepContainer}>
+        <div className={`${style.cepContainer} ${className}`}>
             <form onSubmit={handleSubmit}>
-
                 <input
                     id="cepInput"
                     type="text"
                     value={cep}
                     onChange={formatarCep}
                     placeholder="00000-000"
-                    maxLength="9"
+                    maxLength={9}
                 />
                 <IoMdClose className={style.closeBtn} id="closeBtn" onClick={close} />
-
             </form>
 
             {endereco && (
@@ -58,9 +70,5 @@ export default function CepConsult({ close }) {
                 </div>
             )}
         </div>
-    )
-}
-
-//https://viacep.com.br/
-
-//fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    );
+};

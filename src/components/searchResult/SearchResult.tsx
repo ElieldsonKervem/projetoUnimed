@@ -1,7 +1,18 @@
 'use client';
 import styles from "./searchResult.module.css";
 import Image from "next/image";
-export default function SearchResult({ results }) {
+interface Result {
+  id: number;
+  img?: string;
+  name: string;
+  price: number;
+}
+
+interface SearchResultProps {
+  results: Result[];
+}
+
+export default function SearchResult({ results }: SearchResultProps) {
   return (
     <ul className={styles.resultsList}>
       {results.map((result) => (
