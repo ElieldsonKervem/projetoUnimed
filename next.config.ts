@@ -1,12 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   compiler: {
     reactRemoveProperties: { properties: ['^cz-'] },
   },
-}
-export default nextConfig;
+};
+
+module.exports = nextConfig;
