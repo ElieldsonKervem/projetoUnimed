@@ -1,0 +1,442 @@
+:root {
+  --primary-color: #F47920;
+  --secondary-color: #00995D;
+  --main-light: #FFFFFF;
+  --text-dark: #3F3F3F;
+  --text-muted: #737373;
+  --border-color: #ABABAB;
+  --background-color: #fff;
+  --header-background: #EAE0D5;
+  --nav-bar:#F7F3EE;
+  --font-source-sans: 'Source Sans 3', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button,
+input {
+  border: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-source-sans);
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-size: 3.0rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.nav{
+  width: 100vw;
+  background: var(--nav-bar);
+}
+
+.navBar .container{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  height: 2.4rem;
+}
+
+.navBar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.uniClubContent{
+  width: 10rem;
+  display: flex;
+  gap: 0.6rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.uniClubContent span::after{
+  content: "\203A";
+  position: absolute;
+  left: 9.5rem;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  font-size: 2rem;
+  transform: rotate(90deg);
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.relative {
+  position: relative;
+}
+
+.dot{
+  top: 4.8rem;
+  opacity: 0.2;
+  margin-right: 1rem;
+}
+
+.descountNav{
+  font-size: 0.88rem;
+  font-weight: normal;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.uniclubNav{
+  color: var(--border-color);
+}
+
+.product {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  margin: 0 auto; 
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productsContainer {
+  padding: 1rem;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.productName {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.productCard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background:url('@/../public/vetor.svg'), linear-gradient(to top, #59B650 0%, #00995D 100%);
+  background-repeat: repeat;
+  background-size: cover 100%;
+  position: relative;
+  background-position: 100%;
+}
+
+.containerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.headerContainer {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.headerContainer span {
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: var(--background-color);
+}
+
+.headerContainer h2 {
+  color: var(--background-color);
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardHeader{
+  height: 192px;
+  width: 256px;
+  position: relative;
+}
+
+.cardHeader::before {
+  content: "\2661"; 
+  color: rgba(114, 155, 208, 0.747);
+  font-size: 30px;
+  position: absolute;
+  background: #fcfcfc;
+  padding: 0.2rem;
+  border-radius: 50%;
+  right: 35px;
+  bottom: 12px;
+  border: 1px solid;
+}
+
+.cardBody {
+  padding: 0.5rem 0 0.3rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBody h6, del, span, p {
+  font-size: 19px;
+  font-weight: 100;
+  color: #737373;
+  text-align: left;
+}
+
+.cardBody div span {
+  color: red;
+}
+
+.cardBody p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cardBody div {
+  display: flex;
+  gap: 1rem;
+}
+
+.cardFooter {
+  padding-left: 0.6rem;
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardFooter a {
+  font-size: 19px;
+  text-decoration: underline;
+}
+
+.closeBtn {
+  position: absolute;
+  z-index: 111111;
+  top: 1px;
+  right: 20px;
+  background: none;
+}
+
+.cartIcon {
+  position: fixed;
+  top: 50%;
+  right: 1px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+  html {
+    color-scheme: var(--main-light);
+  }
+}
+
+
+@media (max-width: 1255px) {
+  .navBar .container {
+    width: 87%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .navBar {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  a {
+    font-size: 0.8rem;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .productCard {
+    padding: 1rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+   .headerContainer{
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+   }
+  .headerContainer h2 {
+    font-size: 1rem;
+  }
+  .card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform .3s;
+    height: 436px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 250px;
+    margin: auto;
+}
+.cardFooter a {
+  font-size: 20px;
+ 
+}
+}

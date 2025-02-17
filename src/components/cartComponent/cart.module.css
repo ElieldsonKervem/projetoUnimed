@@ -1,0 +1,132 @@
+.cartContainer{
+    width: 423px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right:1px;
+    top: 10px;
+    background: #FAF7F4;
+    z-index: 111;
+    padding: 1rem;
+  
+}
+.cartContainer::before{
+    content: "";
+    width: 107vw;
+    height: 100vh;
+    background: rgb(220 220 220 / 51%);
+    position: fixed;
+    right: -1vw;
+    z-index: -15;
+    top: -4px;
+}
+
+.cartHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    align-items: center ;
+    gap: 1rem;
+    margin-top: 40px;
+}
+
+.container h2{
+    font-size: 30px;
+    color: var(--primary-color);
+}
+.container span{
+    font-size: 30px;
+    color: gray;
+}
+
+.cartBody{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.cartBodyProduct{
+    display: flex;
+    gap: 1rem;
+}
+.cartFooter{
+    display: flex;
+   width: 100%;
+   justify-content: space-between
+}
+.cartFooter  div {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between
+}
+.cartSubmit{
+    display: flex;
+    margin-top: 1rem;
+   
+}
+.cartSubmit .cartSubHeader {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cartSubmit .cartSubHeader div{
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+    align-items: center;
+    flex: 1;
+    color: gray;
+}
+.cartSubmit .cartSubHeader div span{
+    margin-right: 3rem;
+    color: gray;
+}
+.conditional{
+    margin-top: 0.6rem;
+    display: flex;
+}
+
+.conditional{
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.256);
+    
+}
+.conditional form{
+    display: flex;
+    flex-direction: column;
+    
+}
+#cepInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnSubmit{
+    margin-top: 1rem;
+    background: var(--primary-color);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    width: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 58px;
+}
+.visible {
+    display: flex;
+  }
+  
+  .none {
+    display: none;
+  }
+.none{
+    display: none !important;
+}
+.visible{
+    display: flex;
+}

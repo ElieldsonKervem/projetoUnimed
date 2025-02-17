@@ -1,0 +1,21 @@
+.cepContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.cepContainer input {
+    border-radius: 4rem;
+    width: 363px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+
+
+.closeBtn {
+    position: absolute;
+    left: 333px;
+    top: 35.3rem;
+    font-size: 1.3rem;
+}

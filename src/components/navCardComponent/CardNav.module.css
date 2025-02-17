@@ -1,0 +1,83 @@
+
+
+.CardNav {
+    width: auto;
+    margin: 0 auto ;
+    container-type: inline-size;
+    max-width: 1200px;
+  }
+  
+  .CardNavContainer {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center;
+  }
+  
+  
+  .CardNavContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .navCards {
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    width: 20cqw; /* 20% da largura do container */
+    height: 20cqw; /* Mantém proporção quadrada */
+    max-width: 96px;
+    max-height: 96px;
+  }
+  
+  .navCards:hover {
+    transform: scale(1.05);
+  }
+  
+  .navCards a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .navCards img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Desktop acima de 1200px */
+  @media (min-width: 1200px) {
+    .CardNav {
+      overflow: hidden;
+    }
+  
+    .CardNavContainer {
+      flex-wrap: wrap;
+      overflow-x: hidden;
+      width: 100%;
+      padding: 2rem 0;
+      gap: 2cqw;
+    }
+  
+    .navCards {
+      width: 10cqw;
+      height: 10cqw;
+    }
+  }
+  
+  /* Mobile (até 1199px) */
+  @media (max-width: 1199px) {
+    .CardNavContainer {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+  
+    .navCards {
+      scroll-snap-align: center;
+    }
+  }
