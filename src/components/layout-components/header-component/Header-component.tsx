@@ -7,7 +7,7 @@ import SearchBar from "@/components/serachBar/Search-bar-component";
 import { CiSearch } from "react-icons/ci";
 import gpsIcon from "@/../public/gps.svg";
 import login from "@/../public/login.svg";
-import Cart from "@/components/cartComponent/Cart";
+//import Cart from "@/components/cartComponent/Cart";
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
