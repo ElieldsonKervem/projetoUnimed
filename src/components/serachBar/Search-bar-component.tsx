@@ -4,15 +4,23 @@ import styles from './searchbar.module.css';
 import { useState } from 'react';
 import products from '@/data/products';
 import SearchResult from '@/components/searchResult/SearchResult'; // Importe o componente SearchResult
+import { FormEvent } from 'react';
+
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  // Add other properties as needed
+}
 
 export default function SearchBar() {
   const [querySearch, setQuerySearch] = useState('');
-  const [searchResult, setSearchResult] = useState([]);
+  const [searchResult, setSearchResult] = useState<Product[]>([]);
 
-  function handleWithSubmit(e) {
+  const handleWithSubmit = (e: FormEvent) => {
     e.preventDefault();
     handleWithSearchQuery();
-  }
+  };
 
   const handleWithSearchQuery = () => {
     // Filtra os produtos com base na consulta de busca
@@ -33,7 +41,7 @@ export default function SearchBar() {
           onChange={(e) => setQuerySearch(e.target.value)}
         />
         <button
-          type="submit"
+          type='submit'
           className={styles.searchButton}
           aria-label="Pesquisar"
         >
